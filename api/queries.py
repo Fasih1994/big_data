@@ -15,7 +15,15 @@ def insert_into_db():
     f = Faker()
     t = time()
     with connection.cursor() as cursor:
-        for i in range(1499998, 1500000):
+        q = """
+        create table IF NOT EXISTS test_data (
+        order_id INT,
+        create_date DATE,
+        mobile VARCHAR(50)
+        );
+        """
+        cursor.execute(q)
+        for i in range(1, 15001):
             query = f"insert into test_data (order_id, create_date, mobile) values ({i}, '{f.date_time()}', '{f.name()}');"
             cursor.execute(query)
     return time() - t

@@ -31,7 +31,7 @@
     <connection id="fbdb1da0-e9f3-4bfa-bd61-f93a2020e0f6">
       <console name="Connection" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from test_data;
 
-create table test_data (
+create table IF NOT EXISTS test_data (
 	order_id INT,
 	create_date DATE,
 	mobile VARCHAR(50)
