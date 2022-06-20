@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vl-==^2h07#y4sbiowe2$iqm5_l9ll79bwfq7^$4(*7l8c-ps_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.92.26.185', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['10.92.26.185', 'DC2-BDTA-V-04', 'localhost', '127.0.0.1', "10.1.1.57"]
 
 # Application definition
 
@@ -73,7 +73,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 WSGI_APPLICATION = 'big_data_project.wsgi.application'
 
