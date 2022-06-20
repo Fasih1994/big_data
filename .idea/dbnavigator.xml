@@ -29,7 +29,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="fbdb1da0-e9f3-4bfa-bd61-f93a2020e0f6">
-      <console name="Connection" type="STANDARD" schema="information_schema" session="Main"><![CDATA[create table test_data (
+      <console name="Connection" type="STANDARD" schema="information_schema" session="Main"><![CDATA[select * from test_data;
+
+create table test_data (
 	order_id INT,
 	create_date DATE,
 	mobile VARCHAR(50)
@@ -1034,6 +1036,16 @@ insert into test_data (order_id, create_date, mobile) values (997, '2/15/2022', 
 insert into test_data (order_id, create_date, mobile) values (998, '5/1/2022', 'Opela');
 insert into test_data (order_id, create_date, mobile) values (999, '3/28/2022', 'Sub-Ex');
 insert into test_data (order_id, create_date, mobile) values (1000, '5/8/2022', 'Y-Solowarm');]]></console>
+      <console name="Connection 1" type="STANDARD" schema="information_schema" session="Main"><![CDATA[SELECT * FROM "public".test_data 
+WHERE create_date 
+BETWEEN '2000-02-01' AND '2014-03-01';
+
+
+SELECT count(*) FROM "public".test_data 
+WHERE create_date 
+BETWEEN '2000-02-01' AND '2014-03-01';
+
+SELECT MIN(create_date), MAX(create_date) FROM "public".test_data;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -1041,6 +1053,9 @@ insert into test_data (order_id, create_date, mobile) values (1000, '5/8/2022', 
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="fbdb1da0-e9f3-4bfa-bd61-f93a2020e0f6" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="fbdb1da0-e9f3-4bfa-bd61-f93a2020e0f6" dataset="public.test_data" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
